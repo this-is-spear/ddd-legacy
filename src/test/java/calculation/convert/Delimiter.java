@@ -15,7 +15,6 @@ public class Delimiter {
 			String customDelimiter = m.group(1);
 			return m.group(2).split(customDelimiter);
 		}
-
 		return formula.split(CUSTOM_DELIMITER);
 	}
 

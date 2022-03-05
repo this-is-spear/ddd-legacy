@@ -33,7 +33,7 @@ public final class Number {
 		return value;
 	}
 
-	public int sum(int a, int b) {
-		return a + b;
+	public Number sum(Number other) {
+		return new Number(this.value + other.value);
 	}
 }

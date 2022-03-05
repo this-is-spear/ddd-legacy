@@ -2,6 +2,7 @@ package calculation.number;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public final class Numbers {
 	public static final Numbers EMPTY = new Numbers(new ArrayList<>());
@@ -12,6 +13,6 @@ public final class Numbers {
 	}
 
 	public int sum() {
-		return numbers.stream().mapToInt(Number::getValue).sum();
+		return numbers.stream().reduce(Number::sum).orElse(Number.EMPTY).getValue();
 	}
 }
